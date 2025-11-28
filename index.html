@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHALOM.NET - Votre destination shopping en ligne</title>
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+</head>
+<body class="bg-gray-50">
+    <shalom-header></shalom-header>
+    <shalom-navbar></shalom-navbar>
+    
+    <main class="min-h-screen">
+        <!-- Hero Banner -->
+        <section class="bg-gradient-to-r from-blue-600 to-purple-600 py-8">
+            <div class="container mx-auto px-4">
+                <div class="flex flex-col md:flex-row items-center justify-between">
+                    <div class="md:w-1/2 mb-6 md:mb-0">
+                        <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">
+                            Les meilleures offres du moment
+                        </h1>
+                        <p class="text-xl text-white opacity-90 mb-6">
+                            Découvrez des réductions exceptionnelles sur tous nos produits
+                        </p>
+                        <button class="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 rounded-lg font-semibold text-lg transition duration-300">
+                            Voir les offres
+                        </button>
+                    </div>
+                    <div class="md:w-1/2">
+                        <img src="http://static.photos/retail/640x360/1" alt="Offres spéciales" class="rounded-lg shadow-2xl">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Catégories populaires -->
+        <section class="py-12">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">Catégories populaires</h2>
+                <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4" id="categories-container">
+                    <!-- Categories will be loaded by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Produits en vedette -->
+        <section class="py-12 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="flex justify-between items-center mb-8">
+                    <h2 class="text-3xl font-bold text-gray-800">Produits en vedette</h2>
+                    <a href="#" class="text-blue-600 hover:text-blue-800 font-semibold">Voir tout</a>
+                </div>
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6" id="featured-products">
+                    <!-- Products will be loaded by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Flash Sales -->
+        <section class="py-12 bg-red-50">
+            <div class="container mx-auto px-4">
+                <div class="flex justify-between items-center mb-8">
+                    <div class="flex items-center gap-4">
+                        <h2 class="text-3xl font-bold text-gray-800">Ventes Flash</h2>
+                        <div class="bg-red-600 text-white px-3 py-1 rounded-md font-bold">
+                            <span id="flash-hours">02</span>:<span id="flash-minutes">45</span>:<span id="flash-seconds">18</span>
+                        </div>
+                    </div>
+                    <a href="#" class="text-blue-600 hover:text-blue-800 font-semibold">Voir tout</a>
+                </div>
+                <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4" id="flash-sales">
+                    <!-- Flash sales products will be loaded by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Services -->
+        <section class="py-12">
+            <div class="container mx-auto px-4">
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
+                    <div class="flex flex-col items-center">
+                        <i data-feather="truck" class="w-12 h-12 text-blue-600 mb-4"></i>
+                        <h3 class="font-bold text-lg mb-2">Livraison gratuite</h3>
+                        <p class="text-gray-600">Pour les commandes au-dessus de 200DH</p>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <i data-feather="shield" class="w-12 h-12 text-green-600 mb-4"></i>
+                        <h3 class="font-bold text-lg mb-2">Paiement sécurisé</h3>
+                        <p class="text-gray-600">100% de transactions sécurisées</p>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <i data-feather="rotate-ccw" class="w-12 h-12 text-orange-600 mb-4"></i>
+                        <h3 class="font-bold text-lg mb-2">Retour facile</h3>
+                        <p class="text-gray-600">Retours acceptés sous 15 jours</p>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <i data-feather="headphones" class="w-12 h-12 text-purple-600 mb-4"></i>
+                        <h3 class="font-bold text-lg mb-2">Support 24/7</h3>
+                        <p class="text-gray-600">Assistance client disponible</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <shalom-footer></shalom-footer>
+
+    <script src="components/header.js"></script>
+    <script src="components/navbar.js"></script>
+    <script src="components/footer.js"></script>
+    <script src="script.js"></script>
+    <script>
+        feather.replace();
+    </script>
+</body>
+</html>
